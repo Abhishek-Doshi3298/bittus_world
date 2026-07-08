@@ -2,9 +2,11 @@
 =========================================================
 BITTU'S WORLD
 Global Hubby Engine
-Final Version
+Button + Password Version
 =========================================================
 */
+
+const HUBBY_PASSWORD = "hubby";
 
 let hubbyTypedSecret = "";
 
@@ -24,45 +26,72 @@ function showHubbyToast(message){
 
 }
 
-function createHubbyBadge(){
+function askHubbyPassword(){
 
-    if(document.getElementById("hubbyModeBadge")) return;
+    const enteredPassword = prompt("Enter Hubby Password:");
 
-    const badge = document.createElement("div");
+    if(enteredPassword === HUBBY_PASSWORD){
 
-    badge.id = "hubbyModeBadge";
+        return true;
 
-    badge.innerText = "Hubby Mode 😏";
+    }
 
-    badge.style.position = "fixed";
-    badge.style.top = "18px";
-    badge.style.right = "18px";
-    badge.style.zIndex = "9999";
-    badge.style.padding = "10px 14px";
-    badge.style.borderRadius = "999px";
-    badge.style.background = "rgba(255,183,213,.22)";
-    badge.style.backdropFilter = "blur(14px)";
-    badge.style.border = "1px solid rgba(255,183,213,.35)";
-    badge.style.color = "white";
-    badge.style.fontFamily = "Georgia, serif";
-    badge.style.fontSize = ".9rem";
-    badge.style.boxShadow = "0 0 24px rgba(255,183,213,.24)";
-    badge.style.pointerEvents = "none";
-    badge.style.display = "none";
+    showHubbyToast("Wrong Hubby password.");
 
-    document.body.appendChild(badge);
+    return false;
 
 }
 
-function updateHubbyBadge(){
+function createHubbyButton(){
 
-    createHubbyBadge();
+    if(document.getElementById("hubbyModeButton")) return;
 
-    const badge = document.getElementById("hubbyModeBadge");
+    const button = document.createElement("button");
 
-    if(!badge) return;
+    button.id = "hubbyModeButton";
 
-    badge.style.display = isHubbyModeActive() ? "block" : "none";
+    button.innerText = isHubbyModeActive() ? "Hubby 😏" : "Hubby";
+
+    button.style.position = "fixed";
+    button.style.right = "18px";
+    button.style.bottom = "18px";
+    button.style.zIndex = "70";
+    button.style.minWidth = "86px";
+    button.style.height = "52px";
+    button.style.padding = "0 16px";
+    button.style.borderRadius = "999px";
+    button.style.border = "1px solid rgba(255,183,213,.35)";
+    button.style.background = "rgba(8,15,32,.70)";
+    button.style.backdropFilter = "blur(14px)";
+    button.style.color = "white";
+    button.style.fontFamily = "Georgia, serif";
+    button.style.fontSize = "1rem";
+    button.style.boxShadow = "0 0 24px rgba(255,183,213,.24)";
+    button.style.cursor = "pointer";
+
+    button.addEventListener("click", () => {
+
+        if(askHubbyPassword()){
+
+            toggleHubbyMode();
+
+        }
+
+    });
+
+    document.body.appendChild(button);
+
+}
+
+function updateHubbyButton(){
+
+    createHubbyButton();
+
+    const button = document.getElementById("hubbyModeButton");
+
+    if(!button) return;
+
+    button.innerText = isHubbyModeActive() ? "Hubby 😏" : "Hubby";
 
 }
 
@@ -72,7 +101,7 @@ function activateHubbyMode(){
 
     document.body.classList.add("hubby-mode-active");
 
-    updateHubbyBadge();
+    updateHubbyButton();
 
     showHubbyToast("Hubby Mode activated 😏");
 
@@ -92,7 +121,7 @@ function deactivateHubbyMode(){
 
     document.body.classList.remove("hubby-mode-active");
 
-    updateHubbyBadge();
+    updateHubbyButton();
 
     showHubbyToast("Hubby Mode deactivated ❤️");
 
@@ -113,7 +142,7 @@ function toggleHubbyMode(){
 }
 
 
-// Laptop: type "hubby"
+// Laptop shortcut: type "hubby"
 
 document.addEventListener("keydown", (event) => {
 
@@ -127,7 +156,11 @@ document.addEventListener("keydown", (event) => {
 
     if(hubbyTypedSecret.includes("hubby")){
 
-        toggleHubbyMode();
+        if(askHubbyPassword()){
+
+            toggleHubbyMode();
+
+        }
 
         hubbyTypedSecret = "";
 
@@ -136,62 +169,11 @@ document.addEventListener("keydown", (event) => {
 });
 
 
-// Phone: tap top-right corner 7 times
+// Page sync
 
-function createHubbyTapZone(){
+function syncHubbyMode(){
 
-    if(document.getElementById("hubbyTapZone")) return;
-
-    const tapZone = document.createElement("div");
-
-    tapZone.id = "hubbyTapZone";
-
-    tapZone.style.position = "fixed";
-    tapZone.style.top = "0";
-    tapZone.style.right = "0";
-    tapZone.style.width = "95px";
-    tapZone.style.height = "95px";
-    tapZone.style.zIndex = "45";
-    tapZone.style.background = "transparent";
-
-    document.body.appendChild(tapZone);
-
-    let tapCount = 0;
-
-    let tapTimer;
-
-    tapZone.addEventListener("click", () => {
-
-        tapCount++;
-
-        clearTimeout(tapTimer);
-
-        tapTimer = setTimeout(() => {
-
-            tapCount = 0;
-
-        }, 1800);
-
-        if(tapCount >= 7){
-
-            toggleHubbyMode();
-
-            tapCount = 0;
-
-        }
-
-    });
-
-}
-
-
-// Start
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    createHubbyBadge();
-
-    createHubbyTapZone();
+    createHubbyButton();
 
     if(isHubbyModeActive()){
 
@@ -203,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    updateHubbyBadge();
+    updateHubbyButton();
 
     const currentPage = window.location.pathname;
 
@@ -213,7 +195,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    syncHubbyMode();
+
 });
+
+window.addEventListener("pageshow", () => {
+
+    syncHubbyMode();
+
+});
+
+
 /*
 =========================================================
 GLOBAL FINAL POLISH
@@ -222,7 +218,11 @@ GLOBAL FINAL POLISH
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    if(document.getElementById("globalPolishStyle")) return;
+
     const polishStyle = document.createElement("style");
+
+    polishStyle.id = "globalPolishStyle";
 
     polishStyle.innerHTML = `
         html{
@@ -238,10 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
         button,
         a{
             -webkit-tap-highlight-color:transparent;
-        }
-
-        button:active{
-            transform:scale(.98);
         }
 
         img{
