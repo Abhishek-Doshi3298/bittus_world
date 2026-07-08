@@ -151,7 +151,7 @@ function createHubbyTapZone(){
     tapZone.style.right = "0";
     tapZone.style.width = "95px";
     tapZone.style.height = "95px";
-    tapZone.style.zIndex = "10000";
+    tapZone.style.zIndex = "45";
     tapZone.style.background = "transparent";
 
     document.body.appendChild(tapZone);
