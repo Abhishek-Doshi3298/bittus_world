@@ -125,6 +125,7 @@ const routes = {
     "Gift Box": "gift.html",
     "Charni Road Café": "cafe.html",
     "Love Letters": "letters.html"
+    "Love Letters": "letters.html"
 };
 
 places.forEach(place => {
