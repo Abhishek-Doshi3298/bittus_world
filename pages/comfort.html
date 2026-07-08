@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cozy House - Bittu's World</title>
+
+    <link rel="stylesheet" href="../css/comfort.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Cozy House -->
+
+    <main id="comfortHouse">
+
+        <button id="backHome">
+            ← Back to World
+        </button>
+
+        <section class="comfort-hero">
+
+            <p class="small-text">Cozy House</p>
+
+            <h1>Comfort Corner</h1>
+
+            <p>
+                For tired Bittu, sad Bittu, quiet Bittu, overwhelmed Bittu,
+                or any Bittu who just needs Pattu.
+            </p>
+
+        </section>
+
+        <section id="comfortAdminPanel">
+
+            <p>Hubby Admin Mode Active 😏</p>
+
+            <div class="admin-actions">
+
+                <button id="resetComfortStats">
+                    Reset Comfort Stats
+                </button>
+
+                <button id="unlockAllComfort">
+                    Unlock All Comforts
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="comfort-stats">
+
+            <div>
+                <span id="comfortUsed">0</span>
+                <p>Comforts Used</p>
+            </div>
+
+            <div>
+                <span id="hugsCollected">0</span>
+                <p>Hugs Collected</p>
+            </div>
+
+            <div>
+                <span id="pattuRequests">0</span>
+                <p>Pattu Requests</p>
+            </div>
+
+        </section>
+
+        <section class="room-scene">
+
+            <div class="window-scene">
+
+                <div class="rain"></div>
+
+                <div class="window-glow"></div>
+
+            </div>
+
+            <div class="bed-area">
+
+                <div class="pillow">☁️</div>
+
+                <div class="blanket">🛏️</div>
+
+                <p>Soft bed. Quiet room. Pattu nearby.</p>
+
+            </div>
+
+        </section>
+
+        <section class="comfort-grid">
+
+            <button class="comfort-card" data-comfort="hug">
+                <span>🫂</span>
+                <h2>Tight Hug</h2>
+                <p>For when Bittu needs to be held properly.</p>
+            </button>
+
+            <button class="comfort-card" data-comfort="forehead">
+                <span>💋</span>
+                <h2>Forehead Kiss</h2>
+                <p>Softest Pattu medicine.</p>
+            </button>
+
+            <button class="comfort-card" data-comfort="massage">
+                <span>💆</span>
+                <h2>Massage Request</h2>
+                <p>For tired shoulders, legs, head, or full drama.</p>
+            </button>
+
+            <button class="comfort-card" data-comfort="nimbu">
+                <span>🍋</span>
+                <h2>Nimbu Paani</h2>
+                <p>Hydration for sleepy elephant.</p>
+            </button>
+
+            <button class="comfort-card" data-comfort="cuddle">
+                <span>🛏️</span>
+                <h2>Cuddle Mode</h2>
+                <p>No work. No stress. Only cuddles.</p>
+            </button>
+
+            <button class="comfort-card" data-comfort="quiet">
+                <span>🤍</span>
+                <h2>Quiet Sitting</h2>
+                <p>No pressure to talk. Pattu just stays.</p>
+            </button>
+
+            <button class="comfort-card" data-comfort="drive">
+                <span>🚗</span>
+                <h2>Comfort Drive</h2>
+                <p>Music, silence, talking, crying — Bittu decides.</p>
+            </button>
+
+            <button class="comfort-card" data-comfort="food">
+                <span>🍱</span>
+                <h2>Good Food</h2>
+                <p>Because Bittu should not stay sad and hungry.</p>
+            </button>
+
+        </section>
+
+        <section id="comfortModal">
+
+            <div class="comfort-modal-card">
+
+                <button id="closeComfort">×</button>
+
+                <div id="comfortEmoji"></div>
+
+                <h2 id="comfortTitle"></h2>
+
+                <p id="comfortMessage"></p>
+
+                <div id="comfortActions"></div>
+
+            </div>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/comfort.js"></script>
+
+</body>
+
+</html>

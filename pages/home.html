@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bittu's World - Home</title>
+
+    <link rel="stylesheet" href="../css/home.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Main World -->
+
+    <main id="world">
+
+        <section class="welcome-panel">
+
+            <p class="small-text">Welcome home,</p>
+
+            <h1>Bittu ❤️</h1>
+
+            <p class="main-message">
+                This little world was made for you.
+            </p>
+
+            <p class="sub-message" id="dailyMessage">
+                Loading today's message...
+            </p>
+
+        </section>
+
+        <!-- World Map -->
+
+        <section class="world-map">
+
+            <button class="world-place castle" data-place="Our Story">
+                <span>🏰</span>
+                <p>Castle</p>
+            </button>
+
+            <button class="world-place mood" data-place="Mood Portal">
+                <span>🎡</span>
+                <p>Mood Portal</p>
+            </button>
+
+            <button class="world-place garden" data-place="Coupon Garden">
+                <span>🌸</span>
+                <p>Garden</p>
+            </button>
+
+            <button class="world-place lake" data-place="Memory Lake">
+                <span>🌊</span>
+                <p>Memory Lake</p>
+            </button>
+
+            <button class="world-place arcade" data-place="Game Arcade">
+                <span>🎮</span>
+                <p>Arcade</p>
+            </button>
+
+            <button class="world-place house" data-place="Comfort House">
+                <span>🏡</span>
+                <p>Cozy House</p>
+            </button>
+
+            <button class="world-place cafe" data-place="Charni Road Café">
+                <span>☕</span>
+                <p>Café</p>
+            </button>
+
+            <button class="world-place gift" data-place="Gift Box">
+                <span>🎁</span>
+                <p>Gift Box</p>
+            </button>
+
+        </section>
+
+        <!-- Compass Menu Button -->
+
+        <button id="mapButton">
+            🧭
+        </button>
+
+        <!-- Compass Menu -->
+
+        <section id="compassMenu">
+
+            <div class="map-card">
+
+                <button id="closeMap">×</button>
+
+                <h2>🧭 Bittu's Map</h2>
+
+                <div class="map-list">
+
+                    <p><span>🏰</span> Castle — Our Story</p>
+                    <p><span>🎡</span> Mood Portal — How are you feeling?</p>
+                    <p><span>🌸</span> Garden — Coupons and surprises</p>
+                    <p><span>🌊</span> Memory Lake — Photos and memories</p>
+                    <p><span>🎮</span> Arcade — Mini games</p>
+                    <p><span>🏡</span> Cozy House — Comfort corner</p>
+                    <p><span>☕</span> Café — Charni Road memories</p>
+                    <p><span>🎁</span> Gift Box — Random surprises</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Info Toast -->
+
+        <div id="toast"></div>
+
+    </main>
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/home.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gift Box - Bittu's World</title>
+
+    <link rel="stylesheet" href="../css/gift.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Gift Box -->
+
+    <main id="giftRoom">
+
+        <button id="backHome">
+            ← Back to World
+        </button>
+
+        <section class="gift-hero">
+
+            <p class="small-text">Gift Box</p>
+
+            <h1>Surprise Room</h1>
+
+            <p>
+                Open a surprise from Pattu. It could be cute, romantic, funny,
+                cozy, flirty, or completely random.
+            </p>
+
+        </section>
+
+        <section id="giftAdminPanel">
+
+            <p>Hubby Admin Mode Active 😏</p>
+
+            <div class="admin-actions">
+
+                <button id="resetGiftStats">
+                    Reset Gift Stats
+                </button>
+
+                <button id="unlockPrivateGifts">
+                    Unlock Private Gifts
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="gift-stats">
+
+            <div>
+                <span id="giftsOpened">0</span>
+                <p>Gifts Opened</p>
+            </div>
+
+            <div>
+                <span id="favoriteGifts">0</span>
+                <p>Favorites</p>
+            </div>
+
+            <div>
+                <span id="privateGifts">0</span>
+                <p>Private Gifts</p>
+            </div>
+
+        </section>
+
+        <section class="gift-stage">
+
+            <button id="mainGiftBox">
+
+                <div class="gift-lid">🎀</div>
+
+                <div class="gift-box">🎁</div>
+
+                <p>Tap to open a surprise</p>
+
+            </button>
+
+        </section>
+
+        <section id="giftResult">
+
+            <div class="gift-result-card">
+
+                <button id="closeGift">×</button>
+
+                <div id="giftIcon"></div>
+
+                <h2 id="giftTitle"></h2>
+
+                <p id="giftMessage"></p>
+
+                <div class="gift-actions">
+
+                    <button id="favoriteGiftButton">
+                        Add to Favorites ⭐
+                    </button>
+
+                    <button id="sendGiftWhatsapp">
+                        Send to Pattu 💬
+                    </button>
+
+                    <button id="openAnotherGift">
+                        Open Another 🎁
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="favorite-section">
+
+            <h2>Favorite Gifts ⭐</h2>
+
+            <div id="favoriteGiftList"></div>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/gift.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Love Letters - Bittu's World</title>
+
+    <link rel="stylesheet" href="../css/letters.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Letters World -->
+
+    <main id="lettersWorld">
+
+        <button id="backHome">
+            ← Back to World
+        </button>
+
+        <section class="letters-hero">
+
+            <p class="small-text">Love Letters</p>
+
+            <h1>Letters from Pattu</h1>
+
+            <p>
+                Some things are too soft for normal messages. So Pattu kept them here,
+                folded inside Bittu’s World.
+            </p>
+
+        </section>
+
+        <section id="lettersAdminPanel">
+
+            <p>Hubby Admin Mode Active 😏</p>
+
+            <div class="admin-actions">
+
+                <button id="resetLetterStats">
+                    Reset Letter Stats
+                </button>
+
+                <button id="unlockPrivateLetters">
+                    Unlock Private Letters
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="letter-stats">
+
+            <div>
+                <span id="lettersOpened">0</span>
+                <p>Letters Opened</p>
+            </div>
+
+            <div>
+                <span id="favoriteLetters">0</span>
+                <p>Favorites</p>
+            </div>
+
+            <div>
+                <span id="privateLetters">0</span>
+                <p>Private Letters</p>
+            </div>
+
+        </section>
+
+        <section class="letter-stage">
+
+            <button id="randomLetterButton">
+
+                <div class="letter-envelope">💌</div>
+
+                <h2>Open a Random Letter</h2>
+
+                <p>Tap to read something Pattu wrote for Bittu.</p>
+
+            </button>
+
+        </section>
+
+        <section class="letters-grid" id="lettersGrid"></section>
+
+        <section id="letterModal">
+
+            <div class="letter-modal-card">
+
+                <button id="closeLetter">×</button>
+
+                <div id="letterIcon"></div>
+
+                <p id="letterCategory"></p>
+
+                <h2 id="letterTitle"></h2>
+
+                <p id="letterBody"></p>
+
+                <div class="letter-actions">
+
+                    <button id="favoriteLetterButton">
+                        Add to Favorites ⭐
+                    </button>
+
+                    <button id="sendLetterWhatsapp">
+                        Send to Pattu 💬
+                    </button>
+
+                    <button id="openAnotherLetter">
+                        Open Another 💌
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="favorite-section">
+
+            <h2>Favorite Letters ⭐</h2>
+
+            <div id="favoriteLetterList"></div>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/letters.js"></script>
+
+</body>
+
+</html>

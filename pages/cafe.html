@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Charni Road Café - Bittu's World</title>
+
+    <link rel="stylesheet" href="../css/cafe.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Café -->
+
+    <main id="cafeWorld">
+
+        <button id="backHome">
+            ← Back to World
+        </button>
+
+        <section class="cafe-hero">
+
+            <p class="small-text">Charni Road Café</p>
+
+            <h1>One Coffee</h1>
+
+            <p>
+                Before forever, before marriage, before Bittu’s World,
+                there was one coffee, one drive, and two people slowly becoming something.
+            </p>
+
+        </section>
+
+        <section id="cafeAdminPanel">
+
+            <p>Hubby Admin Mode Active 😏</p>
+
+            <div class="admin-actions">
+
+                <button id="resetCafeStats">
+                    Reset Café Stats
+                </button>
+
+                <button id="unlockPrivateCafe">
+                    Unlock Private Café
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="cafe-stats">
+
+            <div>
+                <span id="coffeeCount">0</span>
+                <p>Coffees Ordered</p>
+            </div>
+
+            <div>
+                <span id="dateRequests">0</span>
+                <p>Date Requests</p>
+            </div>
+
+            <div>
+                <span id="privateOrders">0</span>
+                <p>Private Orders</p>
+            </div>
+
+        </section>
+
+        <section class="cafe-scene">
+
+            <div class="cafe-window">
+
+                <div class="city-lights"></div>
+
+                <p>Charni Road</p>
+
+            </div>
+
+            <div class="coffee-table">
+
+                <div class="coffee-cup">☕</div>
+
+                <h2>Table for Pattu & Bittu</h2>
+
+                <p id="randomCafeLine">
+                    Loading café memory...
+                </p>
+
+                <button id="newCafeLine">
+                    New Café Memory ✨
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="menu-title">
+
+            <p class="small-text">Café Menu</p>
+
+            <h2>Order Something for Bittu</h2>
+
+        </section>
+
+        <section class="cafe-menu">
+
+            <button class="menu-card" data-order="coffee">
+                <span>☕</span>
+                <h2>One Coffee</h2>
+                <p>The original Pattu-Bittu order.</p>
+            </button>
+
+            <button class="menu-card" data-order="drive">
+                <span>🚗</span>
+                <h2>Drive + Coffee</h2>
+                <p>A proper emotional classic.</p>
+            </button>
+
+            <button class="menu-card" data-order="dessert">
+                <span>🍰</span>
+                <h2>Sweet Something</h2>
+                <p>Because Bittu deserves dessert.</p>
+            </button>
+
+            <button class="menu-card" data-order="rant">
+                <span>🗣️</span>
+                <h2>Rant Session</h2>
+                <p>Coffee, listening, no judgement.</p>
+            </button>
+
+            <button class="menu-card" data-order="silent">
+                <span>🤍</span>
+                <h2>Silent Coffee</h2>
+                <p>No pressure to talk. Just sit together.</p>
+            </button>
+
+            <button class="menu-card" data-order="romantic">
+                <span>💙</span>
+                <h2>Romantic Coffee</h2>
+                <p>Soft talking, hand holding, and old memories.</p>
+            </button>
+
+            <button class="menu-card private-menu" data-order="private">
+                <span>😏</span>
+                <h2>Private Café Order</h2>
+                <p>Unlocked only in Hubby Mode.</p>
+            </button>
+
+            <button class="menu-card private-menu" data-order="aftercoffee">
+                <span>💋</span>
+                <h2>After-Coffee Kiss</h2>
+                <p>Unlocked only in Hubby Mode.</p>
+            </button>
+
+        </section>
+
+        <section id="orderModal">
+
+            <div class="order-modal-card">
+
+                <button id="closeOrder">×</button>
+
+                <div id="orderIcon"></div>
+
+                <h2 id="orderTitle"></h2>
+
+                <p id="orderMessage"></p>
+
+                <div class="order-actions">
+
+                    <button id="sendOrderWhatsapp">
+                        Send to Pattu 💬
+                    </button>
+
+                    <button id="orderAgain">
+                        Order Another ☕
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/cafe.js"></script>
+
+</body>
+
+</html>

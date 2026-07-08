@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Arcade - Bittu's World</title>
+
+    <link rel="stylesheet" href="../css/games.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Game Arcade -->
+
+    <main id="gameArcade">
+
+        <button id="backHome">
+            ← Back to World
+        </button>
+
+        <section class="arcade-hero">
+
+            <p class="small-text">Game Arcade</p>
+
+            <h1>Bittu's Arcade</h1>
+
+            <p>
+                Tiny games made for Bittu. Win hearts, unlock surprises, annoy Pattu,
+                and collect cute little rewards.
+            </p>
+
+        </section>
+
+        <section class="arcade-stats">
+
+            <div>
+                <span id="heartScore">0</span>
+                <p>Hearts</p>
+            </div>
+
+            <div>
+                <span id="gamesPlayed">0</span>
+                <p>Games Played</p>
+            </div>
+
+            <div>
+                <span id="bestScore">0</span>
+                <p>Best Score</p>
+            </div>
+
+        </section>
+        <section id="arcadeAdminPanel">
+
+    <p>Hubby Admin Mode Active 😏</p>
+
+    <div class="admin-actions">
+
+        <button id="resetArcadeStats">
+            Reset Arcade Stats
+        </button>
+
+        <button id="addTestHearts">
+            Add 100 Test Hearts
+        </button>
+
+    </div>
+
+</section>
+
+
+
+        <section class="game-grid">
+
+            <button class="game-card" data-game="catchHearts">
+                <span>❤️</span>
+                <h2>Catch Hearts</h2>
+                <p>Catch falling hearts before they disappear.</p>
+            </button>
+
+            <button class="game-card" data-game="findPattu">
+                <span>🐼</span>
+                <h2>Find Pattu</h2>
+                <p>Pattu is hiding somewhere. Tap him fast.</p>
+            </button>
+
+            <button class="game-card" data-game="scratchCard">
+                <span>🎁</span>
+                <h2>Scratch Card</h2>
+                <p>Reveal a random cute or naughty reward.</p>
+            </button>
+
+            <button class="game-card" data-game="spinWheel">
+                <span>🎡</span>
+                <h2>Spin Wheel</h2>
+                <p>Spin to get a date idea, task, or coupon.</p>
+            </button>
+
+            <button class="game-card locked" data-game="memoryMatch">
+                <span>🧠</span>
+                <h2>Memory Match</h2>
+                <p>Coming soon: match Pattu-Bittu memories.</p>
+            </button>
+
+            <button class="game-card locked" data-game="treasureHunt">
+                <span>🗺️</span>
+                <h2>Treasure Hunt</h2>
+                <p>Coming soon: hidden surprises around the world.</p>
+            </button>
+
+        </section>
+        <section class="redeem-shop">
+
+    <div class="shop-header">
+
+        <p class="small-text">Heart Redeem Shop</p>
+
+        <h2>Spend Bittu Hearts ❤️</h2>
+
+        <p>
+            Hearts collected from games can be exchanged for tiny real-life rewards from Pattu.
+        </p>
+
+    </div>
+
+    <div id="redeemGrid"></div>
+
+</section>
+
+        <!-- Game Modal -->
+
+        <section id="gameModal">
+
+            <div class="game-modal-card">
+
+                <button id="closeGame">×</button>
+
+                <h2 id="gameTitle"></h2>
+
+                <div id="gameArea"></div>
+
+            </div>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/games.js"></script>
+
+</body>
+
+</html>

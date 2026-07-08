@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coupon Garden - Bittu's World</title>
+
+    <link rel="stylesheet" href="../css/coupons.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Coupon Garden -->
+
+    <main id="couponGarden">
+
+        <button id="backHome">
+            ← Back to World
+        </button>
+
+        <section class="coupon-hero">
+
+            <p class="small-text">Coupon Garden</p>
+
+            <h1>Bittu's Coupons</h1>
+
+            <p>
+                These are real-life coupons made by Pattu. Some are soft, some are romantic,
+                some are naughty, and all of them belong only to Bittu.
+            </p>
+
+        </section>
+
+        <section class="coupon-stats">
+
+            <div>
+                <span id="totalCoupons">0</span>
+                <p>Total Coupons</p>
+            </div>
+
+            <div>
+                <span id="redeemedCoupons">0</span>
+                <p>Redeemed</p>
+            </div>
+
+            <div>
+                <span id="availableCoupons">0</span>
+                <p>Available</p>
+            </div>
+
+        </section>
+        <section id="hubbyPanel">
+
+    <p>Hubby Mode Active 😏</p>
+
+    <div class="hubby-actions">
+
+    <button id="resetAllCoupons">
+        Make All Coupons Available Again
+    </button>
+
+    <button id="exitHubbyMode">
+        Exit Hubby Mode
+    </button>
+
+</div>
+
+</section> 
+
+        <section id="couponGrid"></section>
+
+        <section id="couponModal">
+
+            <div class="coupon-modal-card">
+
+                <button id="closeCoupon">×</button>
+
+                <div id="modalIcon"></div>
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalDescription"></p>
+
+                <button id="redeemButton">
+                    Redeem Coupon ✨
+                </button>
+
+            </div>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/coupons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Lake - Bittu's World</title>
+
+    <link rel="stylesheet" href="../css/memories.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Memory Lake -->
+
+    <main id="memoryLake">
+
+        <button id="backHome">
+            ← Back to World
+        </button>
+
+        <section class="memory-hero">
+
+            <p class="small-text">Memory Lake</p>
+
+            <h1>Our Memories</h1>
+
+            <p>
+                Little pieces of Pattu and Bittu's world. Some cute, some romantic,
+                some stupid, and some that only the two of us understand.
+            </p>
+
+            <button id="randomMemory">
+                Show Random Memory ✨
+            </button>
+
+        </section>
+        <section id="memoryAdminPanel">
+
+    <p>Hubby Admin Mode Active 😏</p>
+
+    <div class="admin-actions">
+
+        <button id="showHiddenMemories">
+            Show Hidden Memories
+        </button>
+
+        <button id="resetFavoriteMemories">
+            Reset Favorites
+        </button>
+
+    </div>
+
+</section>
+<section class="memory-counter">
+
+    <div>
+        <span id="totalMemories">0</span>
+        <p>Total Memories</p>
+    </div>
+
+    <div>
+        <span id="favoriteMemories">0</span>
+        <p>Favorites</p>
+    </div>
+
+    <div>
+        <span id="hiddenMemories">0</span>
+        <p>Hidden</p>
+    </div>
+
+</section>
+
+<section class="lake-note">
+    Click any memory to open it. Hubby Mode can reveal hidden memories and reset favorites.
+</section>
+
+        <section id="memoryGrid"></section>
+
+        <section id="memoryModal">
+
+            <div class="memory-modal-card">
+
+                <button id="closeMemory">×</button>
+
+                <img id="modalImage" src="" alt="Memory">
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalCaption"></p>
+
+                <div class="memory-actions">
+
+    <button id="previousMemory">
+        ← Previous
+    </button>
+
+    <button id="favoriteButton" class="primary">
+        Add to Favorites ⭐
+    </button>
+
+    <button id="nextMemory">
+        Next →
+    </button>
+
+    <button id="whatsappMemory">
+        Send to Pattu 💬
+    </button>
+
+</div>
+
+            </div>
+
+        </section>
+        <section id="privateCorner">
+
+    <div class="private-card">
+
+        <button id="closePrivateCorner">×</button>
+
+        <p class="small-text">Private Corner</p>
+
+        <h2>Only Pattu & Bittu</h2>
+
+        <p class="private-message">
+            This corner is locked away from the normal world.
+        </p>
+
+        <section id="privateGrid"></section>
+
+    </div>
+
+</section>
+
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/memories.js"></script>
+
+</body>
+
+</html>

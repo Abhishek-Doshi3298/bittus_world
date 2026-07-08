@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mood Portal - Bittu's World</title>
+
+    <link rel="stylesheet" href="../css/mood.css">
+
+</head>
+
+<body>
+
+    <!-- Sky Background -->
+
+    <div id="sky">
+
+        <div id="aurora">
+
+            <div class="aurora ribbon1"></div>
+            <div class="aurora ribbon2"></div>
+            <div class="aurora ribbon3"></div>
+
+        </div>
+
+        <div id="stars"></div>
+
+        <div class="moon"></div>
+
+        <div id="clouds"></div>
+
+        <div id="fireflies"></div>
+
+    </div>
+
+    <!-- Mood Portal -->
+
+    <main id="moodPortal">
+
+        <button id="backHome">
+            ← Back to World
+        </button>
+
+        <section class="mood-header">
+
+            <p class="small-text">Mood Portal</p>
+
+            <h1>How is Bittu feeling?</h1>
+
+            <p>
+                Choose your mood and let Pattu take care of you.
+            </p>
+
+        </section>
+
+        <section class="mood-grid">
+
+            <button class="mood-card" data-mood="happy">
+                <span>😊</span>
+                <h2>Happy</h2>
+                <p>Timepass, teasing, going out, and wrestling Pattu.</p>
+            </button>
+
+            <button class="mood-card" data-mood="sad">
+                <span>🥺</span>
+                <h2>Sad</h2>
+                <p>Immediate comfort, hugs, listening, jokes, food, drives.</p>
+            </button>
+
+            <button class="mood-card" data-mood="angry">
+                <span>😤</span>
+                <h2>Angry</h2>
+                <p>No arguing. No annoying more. Only understanding Bittu.</p>
+            </button>
+
+            <button class="mood-card" data-mood="overwhelmed">
+                <span>😮‍💨</span>
+                <h2>Overwhelmed</h2>
+                <p>Slow down. Hugs, forehead kisses, one thing at a time.</p>
+            </button>
+
+            <button class="mood-card" data-mood="tired">
+                <span>😴</span>
+                <h2>Tired</h2>
+                <p>Cuddles, massage, sleep, and nimbu paani.</p>
+            </button>
+
+            <button class="mood-card" data-mood="quiet">
+                <span>🤍</span>
+                <h2>Quiet</h2>
+                <p>No pressure to talk. Pattu will sit with you.</p>
+            </button>
+
+            <button class="mood-card" data-mood="missing">
+                <span>🥹</span>
+                <h2>Missing Pattu</h2>
+                <p>One virtual hug, one forehead kiss, and one call button.</p>
+            </button>
+
+            <button class="mood-card" data-mood="loved">
+                <span>❤️</span>
+                <h2>Need Love</h2>
+                <p>Hug bank, forehead kisses, and sweet reminders.</p>
+            </button>
+
+            <button class="mood-card" data-mood="flirty">
+                <span>😏</span>
+                <h2>Flirty</h2>
+                <p>Coupons, dares, teasing, and cute couple missions.</p>
+            </button>
+
+        </section>
+
+        <section id="moodResult">
+
+            <button id="closeMood">×</button>
+
+            <div id="moodEmoji"></div>
+
+            <h2 id="moodTitle"></h2>
+
+            <p id="moodMessage"></p>
+
+            <div id="moodTasks"></div>
+
+            <div id="actionButtons"></div>
+
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+    <script src="../js/hubbyEngine.js"></script>
+
+    <script src="../js/skyEngine.js"></script>
+
+    <script src="../js/mood.js"></script>
+
+</body>
+
+</html> 
